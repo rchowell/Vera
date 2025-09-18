@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import os
 import pathlib
+from re import S
 import time
 
 import daft
@@ -30,6 +31,10 @@ def my_workflow(name: str) -> dict:
             ]
         }
     )
+
+    for i in range(300):
+        print(f"Processing {i} of 300")
+        time.sleep(1)
 
     results = {}
     for i in range(3):

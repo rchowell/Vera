@@ -17,6 +17,7 @@ def mkdir() -> str:
 
 
 def my_workflow(name: str) -> dict:
+    print(f"Hello, {name}!, starting a daft job")
     df = daft.from_pydict(
         {
             "text": [
@@ -37,4 +38,5 @@ def my_workflow(name: str) -> dict:
         df_with_emb = df_with_emb.write_parquet(dest)
         results[f"run_{i + 1}"] = dest
 
+    print(f"Thanks, {name}!, daft job completed")
     return {"results": results}

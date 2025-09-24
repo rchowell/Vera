@@ -32,8 +32,8 @@ def my_workflow(name: str) -> dict:
         }
     )
 
-    for i in range(2):
-        print(f"Newly Processing {i} of 2")
+    for i in range(300):
+        print(f"Newly Processing {i} of 300")
         time.sleep(1)
 
     results = {}
@@ -43,7 +43,7 @@ def my_workflow(name: str) -> dict:
         df_with_emb = df_with_emb.write_parquet(dest)
         results[f"run_{i + 1}"] = dest
 
-    for i in range(2):
+    for i in range(300):
         print(f"Processing again {i} of 300")
         time.sleep(1)
 

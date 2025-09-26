@@ -18,7 +18,7 @@ def mkdir() -> str:
 
 
 def my_workflow() -> dict:
-    name = "citizens"
+    name = "demo"
     print(f"Hello, {name}!, starting a daft job")
     df = daft.from_pydict(
         {

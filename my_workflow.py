@@ -17,7 +17,8 @@ def mkdir() -> str:
     return path
 
 
-def my_workflow(name: str) -> dict:
+def my_workflow() -> dict:
+    name = "citizens"
     print(f"Hello, {name}!, starting a daft job")
     df = daft.from_pydict(
         {
@@ -49,3 +50,4 @@ def my_workflow(name: str) -> dict:
 
     print(f"Thanks, {name}!, daft job completed")
     return {"results": results}
+

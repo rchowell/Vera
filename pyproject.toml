@@ -1,0 +1,12 @@
+[project]
+name = "test_daft_workflow"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "ev-sdk",
+]
+
+[tool.uv.sources]
+ev-sdk = { path = "../ev-cloud/ev-sdk", editable = true }

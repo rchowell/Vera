@@ -32,21 +32,8 @@ def my_workflow(name: str) -> dict:
         }
     )
 
-    for i in range(10):
-        print(f"Sleeping for 10s .. {10-i}s remaining.")
-        time.sleep(1)
-
-    results = {}
-    for i in range(3):
-        dest = mkdir()
-        df_with_emb = df.with_column("embedding", embed_text(df["text"]))
-        df_with_emb = df_with_emb.write_parquet(dest)
-        results[f"run_{i + 1}"] = dest
-
-    for i in range(300):
-        print(f"Processing again {i} of 300")
-        time.sleep(1)
-
-    print(f"Thanks, {name}!, daft job completed")
-    return {"results": results}
+    print("Hello from my_workflow.py")
+    return {
+        "my_results": 123
+    }
 

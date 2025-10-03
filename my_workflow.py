@@ -32,6 +32,10 @@ def my_workflow(name: str) -> dict:
         }
     )
 
+    for i in range(60):
+        print(f"Sleeping for {60-i}s")
+        time.sleep(1)
+
     print("Hello from my_workflow.py")
     return {
         "my_results": 123

@@ -32,8 +32,8 @@ def my_workflow(name: str) -> dict:
         }
     )
 
-    for i in range(300):
-        print(f"Newly Processing {i} of 300")
+    for i in range(10):
+        print(f"Sleeping for 10s .. {10-i}s remaining.")
         time.sleep(1)
 
     results = {}

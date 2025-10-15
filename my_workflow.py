@@ -33,6 +33,7 @@ def my_workflow(name: str) -> dict:
     )
 
     for i in range(60):
+        print(f"Taking up some space for the {i}-th time.")
         print(f"Sleeping for {60-i}s")
         time.sleep(1)
 
